@@ -33,4 +33,7 @@ track_id = '6mFkJmJqdDVQ1REhVfGgd1'
 r = requests.get(BASE_URL + 'audio-features/' + track_id, headers=headers)
 
 r = r.json()
-print(r)
+
+print("Danceability", r["danceability"])
+print("instrumentalness", r["instrumentalness"])
+print("liveness", r["liveness"])
