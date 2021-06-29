@@ -8,8 +8,8 @@ r = requests.get(url, headers=headers)
 print( r.json())
 
 '''
-CLIENT_ID = '74a90350ed1d4c1dbc80fe0dc996ce2d'
-CLIENT_SECRET = '9f31a864b9f14ceab01376dcfdb8c730'
+CLIENT_ID = ''
+CLIENT_SECRET = ''
 
 AUTH_URL = 'https://accounts.spotify.com/api/token'
 # POST
