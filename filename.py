@@ -3,6 +3,8 @@ import requests
 import json
 import pandas as pd
 from pandas import DataFrame
+import sqlalchemy
+from sqlalchemy import create_engine
 '''
 url = 'https://api.spotify.com/v1/audio-analysis/4JpKVNYnVcJ8tuMKjAj50A'
 headers = {'Authorization': 'Bearer TOKEN-HERE'}
@@ -39,9 +41,6 @@ r = r.json()
 dance = r["danceability"]
 data = pd.DataFrame.from_dict(r, orient='index')
 print(data)
-
-import sqlalchemy
-from sqlalchemy import create_engine
 
 engine = create_engine('mysql://root:codio@localhost/spot')
 
