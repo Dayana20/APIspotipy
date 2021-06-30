@@ -21,7 +21,7 @@ auth_response = requests.post(AUTH_URL, {
     'client_secret': CLIENT_SECRET,
 })
 
-#print(auth_response.status_code)
+# print(auth_response.status_code)
 
 auth_response_data = auth_response.json()
 
@@ -38,18 +38,17 @@ r = r.json()
 
 dance = r["danceability"]
 data = pd.DataFrame.from_dict(r, orient='index')
-print(data) ##prints formatted data
+print(data)
 
 import sqlalchemy
 from sqlalchemy import create_engine
 
 engine = create_engine('mysql://root:codio@localhost/spot')
 
-
-data.to_sql('table_name', con=engine, if_exists='replace', index=False)
-
 '''
 print("Danceability", r["danceability"])
 print("instrumentalness", r["instrumentalness"])
 print("liveness", r["liveness"])
 '''
+
+data.to_sql('table_name', con=engine, if_exists='replace', index=False)
