@@ -58,5 +58,4 @@ def main():
     status, auth_response = setting_up(CLIENT_ID, CLIENT_SECRET)
     if(status == 0):
         print(calling(auth_response))
-
-        
+ 
