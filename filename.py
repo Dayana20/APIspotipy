@@ -7,9 +7,8 @@ import sqlalchemy
 from sqlalchemy import create_engine
 
 # use client_id,client_secret
-
 def setting_up(CLIENT_ID, CLIENT_SECRET):
-    if(CLIENT_ID==None or CLIENT_SECRET==''):
+    if(CLIENT_ID == None or CLIENT_SECRET == ''):
         return 1
     else:
         CLIENT_ID = CLIENT_ID
@@ -21,38 +20,37 @@ def setting_up(CLIENT_ID, CLIENT_SECRET):
           'client_secret': CLIENT_SECRET,
         })
         if(auth_response.status_code == 200):
-          #calling(auth_response)
-          return 0, auth_response
+            #calling(auth_response)
+            return 0, auth_response
         else:
-          return 1
+            return 1
 
 #need to use appropiate auth_response
 #only called if setting_up works
 def calling(auth_response):
-      if(auth_response != None or auth_response != ''):
-            auth_response_data = auth_response.json()
-            access_token = auth_response_data['access_token']
-
-            headers = {
-                'Authorization': 'Bearer {token}'.format(token=access_token)
-            }
-            BASE_URL = 'https://api.spotify.com/v1/'
-            track_id = '6mFkJmJqdDVQ1REhVfGgd1'
-            r = requests.get(BASE_URL + 'audio-features/' + track_id, headers=headers)
-            r = r.json()
-            dance = r["danceability"]
-            data = pd.DataFrame.from_dict(r, orient='index')
-            engine = create_engine('mysql://root:codio@localhost/spot')
-            data.to_sql('table_name', con=engine, if_exists='replace', index=False)
-            return 0
-      else:
-            return 1
+    if(auth_response != None or auth_response != ''):
+        auth_response_data = auth_response.json()
+        access_token = auth_response_data['access_token']
+        headers = {
+            'Authorization': 'Bearer {token}'.format(token=access_token)
+        }
+        BASE_URL = 'https://api.spotify.com/v1/'
+        track_id = '6mFkJmJqdDVQ1REhVfGgd1'
+        r = requests.get(BASE_URL + 'audio-features/' + track_id, headers=headers)
+        r = r.json()
+        dance = r["danceability"]
+        data = pd.DataFrame.from_dict(r, orient='index')
+        engine = create_engine('mysql://root:codio@localhost/spot')
+        data.to_sql('table_name', con=engine, if_exists='replace', index=False)
+        return 0
+    else:
+        return 1
 
 def main():
-      CLIENT_ID = '74a90350ed1d4c1dbc80fe0dc996ce2d'
-      CLIENT_SECRET = '9f31a864b9f14ceab01376dcfdb8c730'
-      status, auth_response = setting_up(CLIENT_ID , CLIENT_SECRET)
-      if(status == 0):
-            print(calling(auth_response))
+    CLIENT_ID = '74a90350ed1d4c1dbc80fe0dc996ce2d'
+    CLIENT_SECRET = '9f31a864b9f14ceab01376dcfdb8c730'
+    status, auth_response = setting_up(CLIENT_ID , CLIENT_SECRET)
+    if(status == 0):
+        print(calling(auth_response))
   
 main()
