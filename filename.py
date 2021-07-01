@@ -6,9 +6,10 @@ from pandas import DataFrame
 import sqlalchemy
 from sqlalchemy import create_engine
 
+
 # use client_id,client_secret
 def setting_up(CLIENT_ID, CLIENT_SECRET):
-    if(CLIENT_ID == None or CLIENT_SECRET == ''):
+    if(CLIENT_ID is None):
         return 1
     else:
         CLIENT_ID = CLIENT_ID
@@ -20,7 +21,7 @@ def setting_up(CLIENT_ID, CLIENT_SECRET):
           'client_secret': CLIENT_SECRET,
         })
         if(auth_response.status_code == 200):
-            #calling(auth_response)
+            # calling(auth_response)
             return 0, auth_response
         else:
             return 1
@@ -36,7 +37,8 @@ def calling(auth_response):
         }
         BASE_URL = 'https://api.spotify.com/v1/'
         track_id = '6mFkJmJqdDVQ1REhVfGgd1'
-        r = requests.get(BASE_URL + 'audio-features/' + track_id, headers=headers)
+        r = requests.get(BASE_URL + 'audio-features/' 
+                         + track_id, headers=headers)
         r = r.json()
         dance = r["danceability"]
         data = pd.DataFrame.from_dict(r, orient='index')
@@ -49,8 +51,7 @@ def calling(auth_response):
 def main():
     CLIENT_ID = '74a90350ed1d4c1dbc80fe0dc996ce2d'
     CLIENT_SECRET = '9f31a864b9f14ceab01376dcfdb8c730'
-    status, auth_response = setting_up(CLIENT_ID , CLIENT_SECRET)
+    status , auth_response = setting_up(CLIENT_ID , CLIENT_SECRET)
     if(status == 0):
         print(calling(auth_response))
-  
 main()
