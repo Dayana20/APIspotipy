@@ -26,8 +26,9 @@ def setting_up(CLIENT_ID, CLIENT_SECRET):
         else:
             return 1
 
-#need to use appropiate auth_response
-#only called if setting_up works
+
+# need to use appropiate auth_response
+# only called if setting_up works
 def calling(auth_response):
     if(auth_response != None or auth_response != ''):
         auth_response_data = auth_response.json()
@@ -37,7 +38,7 @@ def calling(auth_response):
         }
         BASE_URL = 'https://api.spotify.com/v1/'
         track_id = '6mFkJmJqdDVQ1REhVfGgd1'
-        r = requests.get(BASE_URL + 'audio-features/' 
+        r = requests.get(BASE_URL + 'audio-features/'
                          + track_id, headers=headers)
         r = r.json()
         dance = r["danceability"]
@@ -48,10 +49,10 @@ def calling(auth_response):
     else:
         return 1
 
+
 def main():
     CLIENT_ID = '74a90350ed1d4c1dbc80fe0dc996ce2d'
     CLIENT_SECRET = '9f31a864b9f14ceab01376dcfdb8c730'
     status , auth_response = setting_up(CLIENT_ID , CLIENT_SECRET)
     if(status == 0):
         print(calling(auth_response))
-main()
