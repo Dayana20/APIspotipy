@@ -1,5 +1,4 @@
 import unittest
-import spotipy
 from filename import setting_up, calling
 
 '''
