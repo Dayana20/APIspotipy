@@ -5,6 +5,7 @@ import pandas as pd
 from pandas import DataFrame
 import sqlalchemy
 from sqlalchemy import create_engine
+import os
 
 
 # use client_id,client_secret
@@ -43,8 +44,9 @@ def calling(auth_response):
         r = r.json()
         dance = r["danceability"]
         data = pd.DataFrame.from_dict(r, orient='index')
-        engine = create_engine('mysql://root:codio@localhost/spot')
-        data.to_sql('table_name', con=engine, if_exists='replace', index=False)
+        engine = create_engine('mysql://root:codio@localhost/mysql')
+        os.system("mysqldump -u root -pcodio mysql > spot.sql")
+        data.to_sql('SPOT', con=engine, if_exists='replace', index=False)
         return 0
     else:
         return 1
@@ -56,3 +58,4 @@ def main():
     status, auth_response = setting_up(CLIENT_ID, CLIENT_SECRET)
     if(status == 0):
         print(calling(auth_response))
+main()
