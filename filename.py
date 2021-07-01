@@ -1,5 +1,5 @@
-import spotipy
 import requests
+import spotipy
 import json
 import pandas as pd
 from pandas import DataFrame
@@ -58,3 +58,5 @@ def main():
     status, auth_response = setting_up(CLIENT_ID, CLIENT_SECRET)
     if(status == 0):
         print(calling(auth_response))
+
+        
