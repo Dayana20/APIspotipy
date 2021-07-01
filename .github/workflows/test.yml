@@ -20,4 +20,4 @@ jobs:
 
       - name: Test with unittest
         run: |
-          python3 -m unittest APIspotipy/filename.py
+          python3 -m unittest testFileName.py
