@@ -8,7 +8,7 @@ from sqlalchemy import create_engine
 
 
 # use client_id,client_secret
-def setting_up(CLIENT_ID , CLIENT_SECRET):
+def setting_up(CLIENT_ID, CLIENT_SECRET):
     if(CLIENT_ID is None):
         return 1
     else:
