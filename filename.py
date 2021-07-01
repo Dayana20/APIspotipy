@@ -53,6 +53,6 @@ def calling(auth_response):
 def main():
     CLIENT_ID = '74a90350ed1d4c1dbc80fe0dc996ce2d'
     CLIENT_SECRET = '9f31a864b9f14ceab01376dcfdb8c730'
-    status, auth_response = setting_up(CLIENT_ID , CLIENT_SECRET)
+    status, auth_response = setting_up(CLIENT_ID, CLIENT_SECRET)
     if(status == 0):
         print(calling(auth_response))
