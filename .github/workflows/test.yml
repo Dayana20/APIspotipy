@@ -17,6 +17,9 @@ jobs:
 
       - name: Install tools
         run: sudo pip3 install spotipy
+        
+      - name: Going Back
+        run: cd
 
       - name: Test with unittest
         run: |
