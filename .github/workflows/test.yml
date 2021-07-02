@@ -30,7 +30,7 @@ jobs:
         run: python -m pip install sqlalchemy
 
       - name: Install mysqldb
-        run: sudo apt install -y python-mysqldb
+        run: sudo apt-get install python-pip python-dev libmysqlclient-dev
 
       - name: Install matplotlib
         run: python -m pip install matplotlib
