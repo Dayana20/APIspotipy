@@ -19,12 +19,13 @@ def piechart(dataframe):
         count += 1
         if(count == 5):
             break
-        if(isinstance(values, int) is True or isinstance(values, float) is True):
+        if(isinstance(values, int) is True or 
+           isinstance(values, float) is True):
             sizes.append(abs(values))
             labels.append(key)
     blank = ['']*len(labels)
     fig1, ax1 = plt.subplots()
-    ax1.pie(sizes, explode = None, labels = blank, shadow = False, startangle = 90)
+    ax1.pie(sizes, explode=None, labels=blank, shadow=False, startangle=90)
     ax1.axis('equal')
     # Equal aspect ratio ensures that pie is drawn as a circle.
     plt.xlabel("")
