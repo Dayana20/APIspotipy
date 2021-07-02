@@ -1,5 +1,5 @@
 import unittest
-from filename import setting_up, calling
+# from filename import setting_up, calling
 
 
 class TestFileName(unittest.TestCase):
