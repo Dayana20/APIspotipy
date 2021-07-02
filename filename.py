@@ -10,36 +10,27 @@ import matplotlib.pyplot as plt
 
 
 def piechart(dataframe):
-    # Pie chart, where the slices will be ordered and plotted counter-clockwise:
+    # Pie chart, where the slices will be ordered
+    # and plotted counter-clockwise:
     sizes = []
     labels = []
     count = 0
-    for key,values in dataframe.items():
-        count+=1
-        if(count==5):
-          break
-        if(isinstance(values,int)==True or isinstance(values,float)==True):
+    for key, values in dataframe.items():
+        count += 1
+        if(count == 5):
+            break
+        if(isinstance(values,int) is True or isinstance(values,float) is True):
             sizes.append(abs(values))
             labels.append(key)
-    print(sizes,labels)
     blank = ['']*len(labels)
-    print(blank)
-    
     fig1, ax1 = plt.subplots()
     ax1.pie(sizes, explode=None, labels=blank,
         shadow=False, startangle=90)
-    ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+    ax1.axis('equal')  
+    # Equal aspect ratio ensures that pie is drawn as a circle.
     plt.xlabel("")
     ax1.legend(labels)
     plt.show()
-'''
-    fig = plt.figure()
-    box = fig.add_subplot()
-    box.boxplot(x=sizes, vert=False)
-    box.set_xlabel(labels)
-    box.set_title('Distribution of ' + 'Name')
-    plt.show()
-'''
 
 
 # use client_id,client_secret
@@ -91,6 +82,6 @@ CLIENT_SECRET = '9f31a864b9f14ceab01376dcfdb8c730'
 auth_response = setting_up(CLIENT_ID, CLIENT_SECRET)
 print(auth_response)
 if(auth_response != 1):
-    data  = calling(auth_response)
+    data = calling(auth_response)
 print(data)
 # piechart(data)
