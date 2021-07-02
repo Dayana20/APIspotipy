@@ -19,7 +19,7 @@ def piechart(dataframe):
         count += 1
         if(count == 5):
             break
-        if(isinstance(values, int) is True or 
+        if(isinstance(values, int) is True or
            isinstance(values, float) is True):
             sizes.append(abs(values))
             labels.append(key)
