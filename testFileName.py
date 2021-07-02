@@ -7,8 +7,7 @@ class TestFileName(unittest.TestCase):
         self.assertEqual(setting_up(1, 1), 1)
 
     def test_function2(self):
-        self.assertEqual(calling(1), 3)
-        self.assertEqual(calling(1), 3.3)
+        self.assertEqual(calling(None), 1)
 
 
 if __name__ == '__main__':

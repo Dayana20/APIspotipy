@@ -1,12 +1,12 @@
 import requests
-# import spotipy
-# import json
-# import pandas as pd
-# from pandas import DataFrame
-# import sqlalchemy
-# from sqlalchemy import create_engine
-# import os
-# import matplotlib.pyplot as plt
+import spotipy
+import json
+import pandas as pd
+from pandas import DataFrame
+import sqlalchemy
+from sqlalchemy import create_engine
+import os
+import matplotlib.pyplot as plt
 
 
 def piechart(dataframe):
