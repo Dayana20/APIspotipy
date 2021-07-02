@@ -409,7 +409,7 @@ CREATE TABLE `innodb_index_stats` (
 
 LOCK TABLES `innodb_index_stats` WRITE;
 /*!40000 ALTER TABLE `innodb_index_stats` DISABLE KEYS */;
-INSERT INTO `innodb_index_stats` VALUES ('EPCars','vehicles','PRIMARY','2021-07-01 18:30:03','n_diff_pfx01',5,1,'id'),('EPCars','vehicles','PRIMARY','2021-07-01 18:30:03','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('EPCars','vehicles','PRIMARY','2021-07-01 18:30:03','size',1,NULL,'Number of pages in the index'),('EPDriver','drivers','PRIMARY','2021-07-01 18:23:59','n_diff_pfx01',0,1,'id'),('EPDriver','drivers','PRIMARY','2021-07-01 18:23:59','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('EPDriver','drivers','PRIMARY','2021-07-01 18:23:59','size',1,NULL,'Number of pages in the index'),('EPDriver','passengers','PRIMARY','2021-07-01 17:41:05','n_diff_pfx01',10,1,'id'),('EPDriver','passengers','PRIMARY','2021-07-01 17:41:05','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('EPDriver','passengers','PRIMARY','2021-07-01 17:41:05','size',1,NULL,'Number of pages in the index'),('EPDriver','trips','PRIMARY','2021-07-01 17:41:15','n_diff_pfx01',10,1,'id'),('EPDriver','trips','PRIMARY','2021-07-01 17:41:15','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('EPDriver','trips','PRIMARY','2021-07-01 17:41:15','size',1,NULL,'Number of pages in the index'),('directory','company_profiles','GEN_CLUST_INDEX','2021-06-28 13:13:59','n_diff_pfx01',10,1,'DB_ROW_ID'),('directory','company_profiles','GEN_CLUST_INDEX','2021-06-28 13:13:59','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('directory','company_profiles','GEN_CLUST_INDEX','2021-06-28 13:13:59','size',1,NULL,'Number of pages in the index'),('mysql','SPOT','GEN_CLUST_INDEX','2021-07-01 19:15:27','n_diff_pfx01',18,1,'DB_ROW_ID'),('mysql','SPOT','GEN_CLUST_INDEX','2021-07-01 19:15:27','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('mysql','SPOT','GEN_CLUST_INDEX','2021-07-01 19:15:27','size',1,NULL,'Number of pages in the index'),('mysql','gtid_slave_pos','PRIMARY','2019-09-26 19:52:46','n_diff_pfx01',0,1,'domain_id'),('mysql','gtid_slave_pos','PRIMARY','2019-09-26 19:52:46','n_diff_pfx02',0,1,'domain_id,sub_id'),('mysql','gtid_slave_pos','PRIMARY','2019-09-26 19:52:46','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('mysql','gtid_slave_pos','PRIMARY','2019-09-26 19:52:46','size',1,NULL,'Number of pages in the index'),('mysql','mysql','GEN_CLUST_INDEX','2021-07-01 19:12:48','n_diff_pfx01',18,1,'DB_ROW_ID'),('mysql','mysql','GEN_CLUST_INDEX','2021-07-01 19:12:48','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('mysql','mysql','GEN_CLUST_INDEX','2021-07-01 19:12:48','size',1,NULL,'Number of pages in the index'),('people','basic_info','PRIMARY','2021-06-28 13:13:49','n_diff_pfx01',10,1,'id'),('people','basic_info','PRIMARY','2021-06-28 13:13:49','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('people','basic_info','PRIMARY','2021-06-28 13:13:49','size',1,NULL,'Number of pages in the index'),('people','names','PRIMARY','2021-06-28 13:13:39','n_diff_pfx01',10,1,'id'),('people','names','PRIMARY','2021-06-28 13:13:39','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('people','names','PRIMARY','2021-06-28 13:13:39','size',1,NULL,'Number of pages in the index');
+INSERT INTO `innodb_index_stats` VALUES ('directory','company_profiles','GEN_CLUST_INDEX','2021-06-28 13:13:59','n_diff_pfx01',10,1,'DB_ROW_ID'),('directory','company_profiles','GEN_CLUST_INDEX','2021-06-28 13:13:59','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('directory','company_profiles','GEN_CLUST_INDEX','2021-06-28 13:13:59','size',1,NULL,'Number of pages in the index'),('mysql','SPOT','GEN_CLUST_INDEX','2021-07-02 17:11:26','n_diff_pfx01',18,1,'DB_ROW_ID'),('mysql','SPOT','GEN_CLUST_INDEX','2021-07-02 17:11:26','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('mysql','SPOT','GEN_CLUST_INDEX','2021-07-02 17:11:26','size',1,NULL,'Number of pages in the index'),('mysql','gtid_slave_pos','PRIMARY','2019-09-26 19:52:46','n_diff_pfx01',0,1,'domain_id'),('mysql','gtid_slave_pos','PRIMARY','2019-09-26 19:52:46','n_diff_pfx02',0,1,'domain_id,sub_id'),('mysql','gtid_slave_pos','PRIMARY','2019-09-26 19:52:46','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('mysql','gtid_slave_pos','PRIMARY','2019-09-26 19:52:46','size',1,NULL,'Number of pages in the index'),('people','basic_info','PRIMARY','2021-06-28 13:13:49','n_diff_pfx01',10,1,'id'),('people','basic_info','PRIMARY','2021-06-28 13:13:49','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('people','basic_info','PRIMARY','2021-06-28 13:13:49','size',1,NULL,'Number of pages in the index'),('people','names','PRIMARY','2021-06-28 13:13:39','n_diff_pfx01',10,1,'id'),('people','names','PRIMARY','2021-06-28 13:13:39','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('people','names','PRIMARY','2021-06-28 13:13:39','size',1,NULL,'Number of pages in the index');
 /*!40000 ALTER TABLE `innodb_index_stats` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -437,30 +437,8 @@ CREATE TABLE `innodb_table_stats` (
 
 LOCK TABLES `innodb_table_stats` WRITE;
 /*!40000 ALTER TABLE `innodb_table_stats` DISABLE KEYS */;
-INSERT INTO `innodb_table_stats` VALUES ('EPCars','vehicles','2021-07-01 18:30:03',5,1,0),('EPDriver','drivers','2021-07-01 18:23:59',0,1,0),('EPDriver','passengers','2021-07-01 17:41:05',10,1,0),('EPDriver','trips','2021-07-01 17:41:15',10,1,0),('directory','company_profiles','2021-06-28 13:13:59',10,1,0),('mysql','SPOT','2021-07-01 19:15:27',18,1,0),('mysql','gtid_slave_pos','2019-09-26 19:52:46',0,1,0),('mysql','mysql','2021-07-01 19:12:48',18,1,0),('people','basic_info','2021-06-28 13:13:49',10,1,0),('people','names','2021-06-28 13:13:39',10,1,0);
+INSERT INTO `innodb_table_stats` VALUES ('directory','company_profiles','2021-06-28 13:13:59',10,1,0),('mysql','SPOT','2021-07-02 17:11:26',18,1,0),('mysql','gtid_slave_pos','2019-09-26 19:52:46',0,1,0),('people','basic_info','2021-06-28 13:13:49',10,1,0),('people','names','2021-06-28 13:13:39',10,1,0);
 /*!40000 ALTER TABLE `innodb_table_stats` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `mysql`
---
-
-DROP TABLE IF EXISTS `mysql`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `mysql` (
-  `0` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `mysql`
---
-
-LOCK TABLES `mysql` WRITE;
-/*!40000 ALTER TABLE `mysql` DISABLE KEYS */;
-INSERT INTO `mysql` VALUES ('0.481'),('0.262'),('7'),('-15.73'),('1'),('0.0414'),('0.735'),('0.0114'),('0.832'),('0.375'),('122.883'),('audio_features'),('6mFkJmJqdDVQ1REhVfGgd1'),('spotify:track:6mFkJmJqdDVQ1REhVfGgd1'),('https://api.spotify.com/v1/tracks/6mFkJmJqdDVQ1REhVfGgd1'),('https://api.spotify.com/v1/audio-analysis/6mFkJmJqdDVQ1REhVfGgd1'),('334744'),('4');
-/*!40000 ALTER TABLE `mysql` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -962,4 +940,4 @@ CREATE TABLE IF NOT EXISTS `transaction_registry` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-07-01 19:19:04
+-- Dump completed on 2021-07-02 17:12:22
