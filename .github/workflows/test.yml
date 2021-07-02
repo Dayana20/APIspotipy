@@ -21,7 +21,7 @@ jobs:
         run: sudo pip3 install spotipy
 
       - name: Test with unittest
-        run: python3 -m unittest test.py
+        run: python3 -m unittest testFileName.py
           
       - name: Check code coverage                        #new from here down
         run: |
