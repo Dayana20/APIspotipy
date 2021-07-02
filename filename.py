@@ -1,4 +1,4 @@
-# import requests
+import requests
 # import spotipy
 # import json
 # import pandas as pd
