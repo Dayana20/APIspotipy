@@ -23,9 +23,6 @@ jobs:
       - name: Install spotipy
         run: python -m pip install spotipy        
         
-      - name: Install json
-        run: sudo apt install libpython2.7-stdlib
-        
       - name: Install pandas
         run: python -m pip install pandas
 
