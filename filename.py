@@ -7,6 +7,7 @@ import sqlalchemy
 from sqlalchemy import create_engine
 import os
 import matplotlib.pyplot as plt
+import mysql.connector as MySQLdb
 
 
 def piechart(dataframe):
