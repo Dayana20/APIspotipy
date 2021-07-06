@@ -78,8 +78,8 @@ def calling(auth_response):
         return 1
 
 
-CLIENT_ID = '74a90350ed1d4c1dbc80fe0dc996ce2d'
-CLIENT_SECRET = '9f31a864b9f14ceab01376dcfdb8c730'
+CLIENT_ID = ''
+CLIENT_SECRET = ''
 auth_response = setting_up(CLIENT_ID, CLIENT_SECRET)
 print(auth_response)
 if(auth_response != 1):
